@@ -59,7 +59,7 @@ public class Igra extends Question {
             }
             if (ugadalBukvu) {                       //vivodim otvet esli ugadali
                 System.out.println("U vas ostalos " + (kolvoPopitok - (i + 1)) + " popitok");
-            } else if (neUgadalBukvu) {                                     //vivodim otvet esli ne ugadali
+            } else {                                     //vivodim otvet esli ne ugadali
                 System.out.println("Takoi bukvi net v slove, u vas ostalos " + (kolvoPopitok - (i + 1)) + " popitok");
             }
         }
