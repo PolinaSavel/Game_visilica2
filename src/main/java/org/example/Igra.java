@@ -34,7 +34,6 @@ public class Igra extends Question {
             }
             System.out.println("\nVvedite vashu bukvu: ");
             varianBukviIgroka = scanner.nextLine();
-            boolean neUgadalBukvu = false;
             boolean ugadalBukvu = false;
 
             for (int j = 0; j < topic.length(); j++) {
@@ -43,7 +42,6 @@ public class Igra extends Question {
                     System.out.println("Bukva " + bukva[j] + " pod nomerom: " + (j + 1));
                     verniyOtvet[j] = true;      // esli bukvu ugadali, to true
                     ugadalBukvu = true;
-                    neUgadalBukvu = false;
 
                     for (int k = j + 1; k < topic.length(); k++) {    //vdrug v slove dve povtoryayushiesya bukvi
 
@@ -53,9 +51,7 @@ public class Igra extends Question {
                             verniyOtvet[k] = true;
                         }
                     }
-                } else if (!ugadalBukvu) {                  //esli ne ugadali bukvu
-                    neUgadalBukvu = true;
-                }
+                } 
             }
             if (ugadalBukvu) {                       //vivodim otvet esli ugadali
                 System.out.println("U vas ostalos " + (kolvoPopitok - (i + 1)) + " popitok");
